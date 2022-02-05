@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Colors.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RootPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\Sidera\Colors\</Value>
+    </Setting>
+    <Setting Name="ConfigPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\Sidera\Colors\config\</Value>
+    </Setting>
+    <Setting Name="OutFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\Sidera\Colors\config\custom.csv</Value>
+    </Setting>
+    <Setting Name="OemPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\Sidera\</Value>
+    </Setting>
+    <Setting Name="LargeIcons" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
