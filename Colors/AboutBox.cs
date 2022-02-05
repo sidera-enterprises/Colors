@@ -36,7 +36,13 @@ namespace Colors
 
         private void lnkFollow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ProcessStartInfo psi = new ProcessStartInfo()
+            {
+                FileName = "https://github.com/sidera-enterprises/Colors",
+                UseShellExecute = true
+            };
 
+            Process.Start(psi);
         }
 
         private void lnkHomepage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
