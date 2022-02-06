@@ -27,7 +27,7 @@ And more!
 * USB-portable!
 
 ## Installation Instructions
-This application does not include an installer, but you can download the executable file from the <a href="https://github.com/sidera-enterprises/Colors/releases/download/v1.0.8071.28807/">Releases</a> page, under Assets.
+This application does not include an installer, but you can download the executable file from the <a href="https://github.com/sidera-enterprises/Colors/releases/tag/v1.0.8071.28807">Releases</a> page, under Assets.
 
 ## MIT License
 Copyright © 2022 Sidera Enterprises.
