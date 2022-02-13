@@ -98,6 +98,20 @@ namespace Colors
             get => ColorConvert.FromHex(lvwColors.SelectedItems[0].SubItems[1].Text);
         }
 
+        public bool ColorNameExists
+        {
+            get
+            {
+                foreach (ListViewItem lvi in lvwColors.Items)
+                {
+                    if (lvi.Text.Trim() == txtName.Text.Trim())
+                        return true;
+                }
+
+                return false;
+            }
+        }
+
         private void UpdateButtonStates()
         {
             bool selectone = lvwColors.SelectedItems.Count == 1;
@@ -162,7 +176,7 @@ namespace Colors
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             if (FileMode == Mode.Save)
-                btnOK.Enabled = !string.IsNullOrEmpty(txtName.Text);
+                btnOK.Enabled = !string.IsNullOrWhiteSpace(txtName.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

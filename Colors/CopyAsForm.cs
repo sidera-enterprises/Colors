@@ -33,10 +33,8 @@ namespace Colors
                 switch (lvwOptions.SelectedIndices[0])
                 {
                     case 0:
-                        goto case 1;
-                    case 1:
                         return string.Format("rgb({0}, {1}, {2})", _color.R, _color.G, _color.B);
-                    case 2:
+                    case 1:
                         return ColorConvert.RgbToHex(_color.R, _color.G, _color.B);
                     default:
                         throw new Exception("No option selected.");

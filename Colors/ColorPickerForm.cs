@@ -194,6 +194,8 @@ namespace Colors
             DialogResult dr = d.ShowDialog();
             if (dr == DialogResult.OK)
             {
+                tmrParty.Stop();
+
                 Color c = d.SelectedColor;
 
                 _default = c;
@@ -216,6 +218,25 @@ namespace Colors
                         "Format Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+
+                    btnSave.PerformClick();
+
+                    return;
+                }
+                else if (d.ColorNameExists)
+                {
+                    StringBuilder msg = new StringBuilder();
+                    msg.AppendLine(string.Format("The color '{0}' already exists.", d.ColorName));
+                    msg.AppendLine();
+                    msg.Append("To overwrite this, please delete this color and save it again.");
+
+                    MessageBox.Show(msg.ToString(),
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+
+                    btnSave.PerformClick();
+
                     return;
                 }
 
@@ -224,6 +245,7 @@ namespace Colors
                 string hex = ColorConvert.RgbToHex(c.R, c.G, c.B).ToLower();
 
                 StringBuilder sb = new StringBuilder(File.Exists(AppIo.OutFile) ? (File.ReadAllText(AppIo.OutFile) ?? "") : "");
+                
                 sb.AppendLine(string.Format("{0},{1}", name, hex));
 
                 File.WriteAllText(AppIo.OutFile, sb.ToString());
